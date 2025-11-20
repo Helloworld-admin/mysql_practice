@@ -1,1 +1,1 @@
-# mysql_-practice
+# mysql_practice
