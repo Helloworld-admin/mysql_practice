@@ -38,9 +38,9 @@ trap cleanup SIGTERM SIGINT
 # MySQLのデフォルトエントリーポイントを実行
 # MySQL 8.0の公式イメージでは、/usr/local/bin/docker-entrypoint.shが存在する
 if [ -f /usr/local/bin/docker-entrypoint.sh ]; then
-    exec /usr/local/bin/docker-entrypoint.sh mysqld "$@"
+    exec /usr/local/bin/docker-entrypoint.sh "$@"
 else
     # フォールバック: 直接mysqldを起動
-    exec mysqld "$@"
+    exec "$@"
 fi
 
